@@ -1,0 +1,1635 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uzm. Klinik Psikolog Rıfat Can Telci | Yetişkin Bireysel Danışmanlık</title>
+    <meta name="description" content="Klinik Psikolog Rıfat Can Telci - Yetişkinler için bireysel psikolojik danışmanlık, yüz yüze ve çevrim içi görüşme hizmetleri. Güvenli, etik ve sakin bir keşif alanı.">
+    
+    <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (Play CDN for standalone portability) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        sage: {
+                            50: '#f4f6f4',
+                            100: '#e5ebe6',
+                            200: '#cbd7ce',
+                            300: '#a7bda9',
+                            400: '#7e9e82',
+                            500: '#5c8061',
+                            600: '#46664a',
+                            700: '#38513c',
+                            800: '#2b3f30',
+                            900: '#223427',
+                            950: '#142017',
+                        },
+                        wood: {
+                            50: '#fdfbf9',
+                            100: '#f9f5f0',
+                            200: '#f1e6da',
+                            300: '#e4d2bf',
+                            400: '#cfaea1',
+                            500: '#b08968',
+                            600: '#9c7354',
+                            700: '#7f5a41',
+                            800: '#684a37',
+                            900: '#563e30',
+                        },
+                        warmCanvas: '#FAF8F5',
+                        warmCard: '#F5F1EB',
+                        warmBorder: '#E8E1D7',
+                        deepCharcoal: '#1E2621',
+                        mutedOlive: '#4E5F52',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="alternate icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-warmCanvas text-deepCharcoal font-sans antialiased selection:bg-sage-200 selection:text-sage-900 min-h-screen flex flex-col">
+
+    <!-- ÜST BİLGİ ŞERİDİ -->
+    <div class="bg-sage-900 text-stone-200 text-xs py-2 px-4 border-b border-sage-800">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="flex items-center gap-1.5 text-stone-300"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-sage-300"></i> Çankaya, Ankara</span>
+            </div>
+            <div class="flex items-center gap-4 text-stone-300">
+                <a href="mailto:rifatcan@gmail.com" class="hover:text-white transition-colors flex items-center gap-1.5">
+                    <i data-lucide="mail" class="w-3.5 h-3.5 text-sage-300"></i> rifatcan@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVİGASYON -->
+    <header class="sticky top-0 z-40 bg-warmCanvas/90 backdrop-blur-md border-b border-warmBorder transition-all duration-300" id="mainHeader">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo & İsim -->
+            <a href="#anasayfa" class="group flex flex-col">
+                <span class="font-serif text-2xl md:text-2xl font-bold tracking-wide text-sage-900 group-hover:text-sage-700 transition-colors">
+                    Rıfat Can Telci
+                </span>
+                <span class="text-xs uppercase tracking-widest text-wood-600 font-medium">
+                    Klinik Psikolog
+                </span>
+            </a>
+
+            <!-- Masaüstü Menü -->
+            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-stone-700">
+                <a href="#anasayfa" class="nav-link hover:text-sage-800 transition-colors py-1">Ana Sayfa</a>
+                <a href="#hakkimda" class="nav-link hover:text-sage-800 transition-colors py-1">Hakkımda</a>
+                <a href="#calisma-alanlari" class="nav-link hover:text-sage-800 transition-colors py-1">Çalışma Alanları</a>
+                <a href="#surec" class="nav-link hover:text-sage-800 transition-colors py-1">Görüşme Süreci</a>
+                <a href="#yazilar" class="nav-link hover:text-sage-800 transition-colors py-1">Yazılar & Notlar</a>
+                <a href="#sss" class="nav-link hover:text-sage-800 transition-colors py-1">S.S.S.</a>
+                <a href="#iletisim" class="nav-link hover:text-sage-800 transition-colors py-1">İletişim</a>
+            </nav>
+
+            <!-- Hızlı Randevu Butonu -->
+            <div class="hidden sm:flex items-center gap-3">
+                <button onclick="openBookingModal()" class="px-5 py-2.5 bg-sage-800 hover:bg-sage-900 text-stone-100 text-sm font-medium rounded-full shadow-sm hover:shadow transition-all duration-200 flex items-center gap-2 group">
+                    <span>Randevu Talep Et</span>
+                    <i data-lucide="calendar" class="w-4 h-4 text-sage-300 group-hover:scale-110 transition-transform"></i>
+                </button>
+            </div>
+
+            <!-- Mobil Menü Butonu -->
+            <button id="mobileMenuBtn" aria-label="Menüyü Aç" class="lg:hidden p-2 rounded-lg text-stone-700 hover:bg-warmCard transition-colors">
+                <i data-lucide="menu" id="menuOpenIcon" class="w-6 h-6"></i>
+                <i data-lucide="x" id="menuCloseIcon" class="w-6 h-6 hidden"></i>
+            </button>
+        </div>
+
+        <!-- Mobil Menü Açılır Panel -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-warmCanvas border-b border-warmBorder px-6 py-6 space-y-4 shadow-lg transition-all">
+            <nav class="flex flex-col space-y-3 text-base font-medium text-stone-700">
+                <a href="#anasayfa" class="mobile-nav-link hover:text-sage-800 py-1 border-b border-warmBorder/60">Ana Sayfa</a>
+                <a href="#hakkimda" class="mobile-nav-link hover:text-sage-800 py-1 border-b border-warmBorder/60">Hakkımda</a>
+                <a href="#calisma-alanlari" class="mobile-nav-link hover:text-sage-800 py-1 border-b border-warmBorder/60">Çalışma Alanları</a>
+                <a href="#surec" class="mobile-nav-link hover:text-sage-800 py-1 border-b border-warmBorder/60">Görüşme Süreci</a>
+                <a href="#yazilar" class="mobile-nav-link hover:text-sage-800 py-1 border-b border-warmBorder/60">Yazılar & Notlar</a>
+                <a href="#sss" class="mobile-nav-link hover:text-sage-800 py-1 border-b border-warmBorder/60">Sıkça Sorulan Sorular</a>
+                <a href="#iletisim" class="mobile-nav-link hover:text-sage-800 py-1">İletişim</a>
+            </nav>
+            <div class="pt-3">
+                <button onclick="openBookingModal(); toggleMobileMenu();" class="w-full py-3 bg-sage-800 text-white rounded-full font-medium flex items-center justify-center gap-2 shadow">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                    <span>Randevu Talep Et</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- ============================================== -->
+        <!-- 1. HERO SECTION (GİRİŞ & İLK İZLENİM)          -->
+        <!-- ============================================== -->
+        <section id="anasayfa" class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden">
+            <!-- Arka Plan Doğal Dalgalar & Işık Efekti -->
+            <div class="absolute top-0 right-0 -mr-32 -mt-32 w-96 h-96 rounded-full bg-sage-100/60 blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 -ml-24 -mb-24 w-80 h-80 rounded-full bg-wood-200/40 blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Sol Metin Alanı (7 Sütun) -->
+                    <div class="lg:col-span-7 space-y-6">
+                        
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sage-100 text-sage-800 text-xs font-semibold tracking-wide border border-sage-200">
+                            <span class="w-2 h-2 rounded-full bg-sage-600 animate-pulse"></span>
+                            Yetişkin Bireysel Danışmanlık • Yüz yüze & Çevrimiçi
+                        </div>
+
+                        <h1 class="font-serif text-2xl sm:text-3xl lg:text-4xl text-sage-950 font-bold tracking-tight leading-snug">
+                            Bazen kendimizi anlamak için <br>
+                            <span class="italic font-normal text-wood-700">anlatmaya ihtiyaç</span> duyarız.
+                        </h1>
+
+                        <!-- Giriş Paragrafı (Kullanıcının başlangıç cümlesi) -->
+                        <div class="text-stone-600 text-lg leading-relaxed space-y-3 font-normal max-w-xl">
+                            <p class="border-l-2 border-sage-400 pl-4 italic text-stone-700 font-serif text-xl">
+                                "Bazen bir şeylerin yolunda gitmediğini fark ederiz. 
+                                Bazen anlatacak çok şey vardır; bazen de nereden başlayacağımızı bilemeyiz."
+                            </p>
+                            <p class="text-base text-stone-600">
+                                Görüşmelerimizde sizi zorlayan şeylere, neye ihtiyaç duyduğunuza ve hayatınızda nelerin değişmesini istediğinize birlikte bakarız.
+                            </p>
+                        </div>
+
+                        <!-- Butonlar & Eylemler -->
+                        <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                            <button onclick="openBookingModal()" class="px-7 py-3.5 bg-sage-800 hover:bg-sage-900 text-white rounded-full font-medium shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2.5">
+                                <span>İlk Görüşme İçin Randevu Al</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                            <a href="#hakkimda" class="px-6 py-3.5 bg-warmCard hover:bg-stone-200/70 text-stone-700 border border-warmBorder rounded-full font-medium transition-colors flex items-center justify-center gap-2">
+                                <span>Yaklaşımım & Hakkımda</span>
+                            </a>
+                        </div>
+
+                        <!-- Bilgi Rozetleri -->
+                        <div class="pt-6 grid grid-cols-2 gap-6 border-t border-warmBorder/80 max-w-sm">
+                            <div class="space-y-0.5">
+                                <p class="text-xs text-wood-700 font-semibold uppercase tracking-wider">Format</p>
+                                <p class="text-sm font-medium text-stone-800">Yüz yüze & Çevrimiçi</p>
+                            </div>
+                            <div class="space-y-0.5">
+                                <p class="text-xs text-wood-700 font-semibold uppercase tracking-wider">Görüşme Süresi</p>
+                                <p class="text-sm font-medium text-stone-800">45-50 Dakika</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Sağ Görsel & Temsili Fotoğraf Alanı (5 Sütun) -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            
+                            <!-- Arka dekoratif ahşap & yeşil kartlar -->
+                            <div class="absolute inset-0 bg-wood-300 rounded-3xl transform rotate-3 scale-95 opacity-50 transition-transform"></div>
+                            <div class="absolute inset-0 bg-sage-700 rounded-3xl transform -rotate-2 scale-98 opacity-20"></div>
+
+                            <!-- Ana Fotoğraf Kartı -->
+                            <div class="relative bg-white rounded-3xl p-3 shadow-xl border border-warmBorder overflow-hidden group">
+                                <div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-stone-100 flex items-center justify-center">
+                                    
+                                    <!-- Portre Fotoğrafı -->
+                                    <img src="profil.jpg" 
+                                         alt="Uzm. Klinik Psikolog Rıfat Can Telci" 
+                                         class="w-full h-full object-cover object-top filter contrast-[1.02] brightness-[0.98] group-hover:scale-105 transition-transform duration-700"
+                                         id="profileImagePreview">
+                                    
+                                    <!-- Gradient Overlay -->
+                                    <div class="absolute inset-0 bg-gradient-to-t from-sage-950/70 via-transparent to-transparent"></div>
+
+                                    <!-- Fotoğraf Üst Rozeti -->
+                                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-full text-[11px] font-medium text-stone-700 shadow-sm border border-stone-200/60 flex items-center gap-1.5">
+                                        <i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-sage-600"></i>
+                                        <span>Yüz Yüze & Online</span>
+                                    </div>
+
+                                    <!-- Fotoğraf Üzerindeki İsim Şeridi -->
+                                    <div class="absolute bottom-4 left-4 right-4 text-white p-3 rounded-xl backdrop-blur-sm bg-black/20 border border-white/20">
+                                        <div class="flex items-center justify-between">
+                                            <div>
+                                                <p class="font-serif text-lg font-semibold tracking-wide">Rıfat Can Telci</p>
+                                                <p class="text-xs text-sage-200">Klinik Psikolog</p>
+                                            </div>
+                                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white">
+                                                <i data-lucide="sparkles" class="w-4 h-4"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 2. KLİNİK FELSEFE & YOL HARİTASI (ÖZEL METİN)  -->
+        <!-- ============================================== -->
+        <!-- ============================================== -->
+        <!-- 2. KLİNİK FELSEFE & YOL HARİTASI (ÖZEL METİN)  -->
+        <!-- ============================================== -->
+        <section class="py-16 md:py-24 bg-warmCard/60 border-y border-warmBorder relative">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <!-- Kullanıcının Kendi Yazdığı Değerli Manifesto Metni -->
+                <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-warmBorder relative overflow-hidden">
+                    
+                    <!-- Dekoratif Tırnak İşareti -->
+                    <div class="absolute -top-4 -right-4 text-stone-100 font-serif text-[130px] select-none pointer-events-none leading-none">
+                        ”
+                    </div>
+
+                    <div class="prose prose-stone max-w-none text-stone-700 leading-relaxed space-y-6 text-base sm:text-lg font-normal">
+                        
+                        <p class="font-serif text-xl sm:text-2xl text-sage-900 font-semibold italic border-b border-warmBorder pb-4">
+                            Bazen bir şeylerin yolunda gitmediğini fark ederiz. <br>
+                            Bazen anlatacak çok şey vardır; bazen de nereden başlayacağımızı bilemeyiz.
+                        </p>
+
+                        <p>
+                            Bir ilişki neden hep benzer bir yerde tıkanır? Yaşadığımız hayatla yaşamak istediğimiz arasındaki mesafe nasıl açılır? Doğru görünen bir kararı vermek neden bu kadar güçtür? Kimi zaman öfkemizin ya da içimizdeki boşluğun nereden geldiğini, eskiden keyif veren şeylerin neden artık aynı duyguyu uyandırmadığını anlamakta zorlanırız.
+                        </p>
+
+                        <div class="bg-warmCanvas p-5 rounded-2xl border-l-4 border-sage-600 my-6">
+                            <p class="text-stone-800 font-medium italic mb-0">
+                                Bu soruların herkes için geçerli tek bir cevabı yok. Yaşadığımız güçlükler; geçmişimizle, bugünkü koşullarımızla, korkularımızla, dile getirmekte zorlandığımız duygularla ve kendimizden beklediklerimizle iç içe geçer.
+                            </p>
+                        </div>
+
+                        <p>
+                            Bazen neyi değiştirmek istediğimizi bulabilmek için önce neyi sürdürdüğümüzü, neyi geride bırakmakta zorlandığımızı keşfetmek gerekir. <span class="font-semibold text-stone-800">Çünkü bir davranışın nedenini bilmek, onu değiştirmeyi her zaman kolaylaştırmaz.</span>
+                        </p>
+
+                        <p class="text-sage-900 font-medium">
+                            Görüşmelerde hem hissettiklerinizin ve yaşadıklarınızın sizin için taşıdığı anlama hem de benzer durumlar karşısında neleri farklı yapabileceğinize birlikte bakıyoruz.
+                        </p>
+
+                    </div>
+
+                    <!-- İmzalı Bölüm -->
+                    <div class="mt-8 pt-6 border-t border-warmBorder flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                        <div>
+                            <p class="font-serif text-lg font-bold text-sage-900">Rıfat Can Telci</p>
+                            <p class="text-xs text-stone-500">Klinik Psikolog</p>
+                        </div>
+                        <a href="#calisma-alanlari" class="text-sm font-semibold text-sage-700 hover:text-sage-900 flex items-center gap-1 group">
+                            <span>Çalışma Alanlarını Keşfedin</span>
+                            <i data-lucide="chevron-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 3. HAKKIMDA (BİYOGRAFİ & YAKLAŞIM)             -->
+        <!-- ============================================== -->
+        <section id="hakkimda" class="py-20 md:py-28">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    
+                    <!-- Sol: Ofis & Atmosfer Görseli -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="relative rounded-3xl overflow-hidden shadow-lg border border-warmBorder bg-warmCard">
+                            <!-- Gerçek Ofis Fotoğraf Alanı -->
+                            <div class="relative aspect-[3/4] overflow-hidden bg-stone-100 group">
+                                <img src="images/ofis_genel.jpg" 
+                                     alt="Güvenli ve Huzurlu Görüşme Ortamı - Rıfat Can Telci Ofisi" 
+                                     class="w-full h-full object-cover filter contrast-[1.02] brightness-[1.01] transition-all duration-500 group-hover:scale-105"
+                                     id="officeImagePreview">
+                            </div>
+                            
+                            <div class="p-5 bg-white text-center border-t border-warmBorder/60">
+                                <h3 class="font-serif text-lg font-bold text-sage-950">Güvenli bir Görüşme Ortamı</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sağ: Metin & Eğitim Geçmişi -->
+                    <div class="lg:col-span-7 space-y-6">
+                        
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-wood-600 font-bold">Özgeçmiş & Yaklaşım</span>
+                            <h2 class="font-serif text-3xl sm:text-4xl text-sage-950 font-bold mt-1">
+                                Hakkımda
+                            </h2>
+                            <p class="text-wood-700 font-medium mt-1">Uzm. Klinik Psikolog Rıfat Can Telci</p>
+                        </div>
+
+                        <div class="text-stone-600 space-y-4 text-base leading-relaxed">
+                            <p>
+                                Psikoloji lisansımı ve Klinik Psikoloji yüksek lisansımı Başkent Üniversitesi’nde tamamladım. Eğitimim boyunca insan davranışlarını, duygusal süreçleri ve hayatımızda tekrar eden güçlükleri anlamaya odaklandım. Ayrıca Hacettepe Üniversitesi’nde İşletme (MBA) ve University for the Creative Arts’ta (UCA) Veri Analitiği yüksek lisans eğitimlerimi tamamladım.
+                            </p>
+                            <p class="text-stone-700 font-medium">
+                                Türk Psikologlar Derneği (TPD) ve Association for Psychological Science (APS) üyesiyim.
+                            </p>
+                            <p>
+                                Psikolojik danışmanlığı, yaşanan sıkıntıları hafifletmenin yanında kişinin kendisiyle, başkalarıyla ve hayatla kurduğu ilişkiyi keşfedebileceği bir ortak yolculuk olarak görüyorum. Bazen aynı yerde neden tekrar tekrar zorlandığımızı anlamaya çalışırız; bazen de neye ihtiyaç duyduğumuza, yaptığımız seçimlere ve nasıl bir hayat yaşamak istediğimize bakarız. Hayatımızda değer verdiğimiz ve anlam bulduğumuz şeylerin bu yolculukta önemli bir yeri olduğuna inanıyorum.
+                            </p>
+                            <p>
+                                Görüşmelerimde sizi kendi yaşam öykünüz içinde anlamayı, ihtiyaçlarınızı ve içinde bulunduğunuz koşulları birlikte ele almayı önemsiyorum. Güvene dayalı, kendi hızınıza saygı duyan bir yaklaşımla çalışıyorum.
+                            </p>
+                            <p class="text-sage-950 font-semibold">
+                                Yetişkinlerle yüz yüze ve çevrim içi bireysel çalışmalar ve psikolojik danışmanlık hizmetleri yürütüyorum.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 4. ÇALIŞMA ALANLARI                            -->
+        <!-- ============================================== -->
+        <section id="calisma-alanlari" class="py-20 md:py-28 bg-warmCard/40 border-t border-warmBorder">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="max-w-3xl mx-auto text-center mb-16 space-y-3">
+                    <span class="text-xs uppercase tracking-widest text-wood-600 font-bold">Çalışma Alanları</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-sage-950 font-bold">
+                        Hangi Konularda Birlikte Çalışabiliriz?
+                    </h2>
+                    <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+                        Görüşmelere başlamak için yaşadıklarınıza bir ad koymuş olmanız gerekmez. Bazen belirli bir konuda zorlanır, bazen de neyin sizi zorladığını anlamak istersiniz. Aşağıdaki başlıklar, birlikte ele alabileceğimiz konulardan bazılarıdır.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                    
+                    <!-- Kart 1: İlişkiler ve İletişim -->
+                    <div class="bg-white rounded-2xl p-7 border border-warmBorder shadow-sm hover:shadow-md hover:border-sage-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <i data-lucide="users" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2.5">İlişkiler ve İletişim</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Yakın ilişkilerde benzer tartışmaların tekrar etmesi, anlaşılmadığınızı hissetmek veya kendi ihtiyaçlarınızı dile getirmekte zorlanmak yorucu olabilir. Yaşadıklarınızı, ilişkiden beklentileriniz ve sizin için taşıdığı anlamla birlikte ele alabiliriz.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-warmBorder/60 pt-4">
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>Tekrar eden tartışmalar ve iletişim güçlükleri</span></li>
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>Hayır demekte zorlanma ve kişisel sınırlar</span></li>
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>Duygusal mesafe, güven ve yakınlıkla ilgili güçlükler</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Kart 2: Kaygı ve Belirsizlik -->
+                    <div class="bg-white rounded-2xl p-7 border border-warmBorder shadow-sm hover:shadow-md hover:border-sage-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <i data-lucide="wind" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2.5">Kaygı ve Belirsizlik</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Geleceğe ilişkin sorular, sonucu bilinmeyen durumlar veya önemli bir şeyin ters gitme ihtimali zihninizi uzun süre meşgul edebilir. Kaygının hangi anlarda belirginleştiğini ve hayatınızdaki yerini birlikte anlamaya çalışabiliriz.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-warmBorder/60 pt-4">
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>Geleceğe ilişkin endişeler ve sürekli tetikte hissetme</span></li>
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>Kontrol etme ihtiyacı ve tekrar tekrar güvence arama</span></li>
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>Zihinsel yorgunluk ve kaygıya eşlik eden bedensel gerginlik</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Kart 3: İş Yaşamı ve Tükenmişlik -->
+                    <div class="bg-white rounded-2xl p-7 border border-warmBorder shadow-sm hover:shadow-md hover:border-sage-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <i data-lucide="briefcase" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2.5">İş Yaşamı ve Tükenmişlik</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                İşin yükü, çalışma koşulları ve kendinizden beklentileriniz zamanla yorucu bir hâl alabilir. Görüşmelerimizde iş yaşamında sizi zorlayan konulara, üstlendiğiniz sorumluluklara ve işin hayatınızdaki yerine bakabiliriz.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-warmBorder/60 pt-4">
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>İşle ilgili yorgunluk, isteksizlik ve tükenmişlik</span></li>
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>İş ortamında baskı, stres ve yetersizlik hissi</span></li>
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>İş ve özel hayat arasında sıkışma, mesleki tatminle ilgili sorular</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Kart 4: Anlam ve Yön Arayışı -->
+                    <div class="bg-white rounded-2xl p-7 border border-warmBorder shadow-sm hover:shadow-md hover:border-sage-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-wood-200 text-wood-800 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <i data-lucide="compass" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2.5">Anlam ve Yön Arayışı</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Hayatınız dışarıdan yolunda görünürken, yaptıklarınızla kendi istekleriniz arasında bir uzaklık hissedebilirsiniz. Sizin için nelerin değerli olduğunu, bugün yaşadığınız hayatın size nasıl geldiğini ve hangi sorularla meşgul olduğunuzu birlikte konuşabiliriz.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-warmBorder/60 pt-4">
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Boşluk hissi, isteksizlik ve hayattan uzaklaşmış hissetme</span></li>
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Hayatın yönüne ve kişisel anlamına ilişkin sorular</span></li>
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Kendi istekleriyle başkalarının beklentileri arasında kalma</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Kart 5: Karar Verme ve Yaşam Değişiklikleri -->
+                    <div class="bg-white rounded-2xl p-7 border border-warmBorder shadow-sm hover:shadow-md hover:border-sage-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-wood-200 text-wood-800 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <i data-lucide="git-branch" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2.5">Karar Verme ve Yaşam Değişiklikleri</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Bir seçim yapmak, bazı ihtimallere yaklaşırken bazılarını geride bırakmak anlamına gelebilir. Kararsızlığı, değişime ilişkin duygularınızı ve seçeneklerin sizin hayatınızdaki karşılığını birlikte ele alabiliriz.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-warmBorder/60 pt-4">
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Önemli kararlarda zorlanma ve hata yapma kaygısı</span></li>
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Erteleme ve kusursuz karar verme beklentisi</span></li>
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Taşınma, kariyer değişikliği ve yeni yaşam koşullarına uyum</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Kart 6: Kendimizle Kurduğumuz İlişki -->
+                    <div class="bg-white rounded-2xl p-7 border border-warmBorder shadow-sm hover:shadow-md hover:border-sage-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-wood-200 text-wood-800 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <i data-lucide="shield" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2.5">Kendimizle Kurduğumuz İlişki</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Bir hata yaptığınızda kendinize söyledikleriniz veya başkalarıyla yaptığınız karşılaştırmalar, yaşanan olayın ötesinde bir ağırlık taşıyabilir. Kendinizi nasıl değerlendirdiğinize, beklentilerinize ve kendi ihtiyaçlarınıza nasıl yaklaştığınıza birlikte bakabiliriz.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-warmBorder/60 pt-4">
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Kendine karşı sertlik ve yoğun öz-eleştiri</span></li>
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Yetersizlik hissi, onay arayışı ve başkalarıyla kıyaslama</span></li>
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Yüksek beklentiler, mükemmeliyetçilik ve hata yapma güçlüğü</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Kart 7: Yas ve Kayıp -->
+                    <div class="bg-white rounded-2xl p-7 border border-warmBorder shadow-sm hover:shadow-md hover:border-sage-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2.5">Yas ve Kayıp</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Bir kaybın ardından özlem, üzüntü, öfke, suçluluk veya yarım kalmışlık gibi farklı duygular yaşanabilir. Kaybettiğiniz kişiyle ilişkinize, kaybın sizin için anlamına ve hayatınızda değişen şeylere, ihtiyaç duyduğunuz zamanda yer verebiliriz.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-warmBorder/60 pt-4">
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>Yakın birinin kaybı ve yasla birlikte yaşanan duygular</span></li>
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>Kayıpla ilgili suçluluk, pişmanlık ve yarım kalmışlık</span></li>
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>Kaybın ardından değişen günlük yaşam ve ilişkiler</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Kart 8: Ebeveyn Danışmanlığı -->
+                    <div class="bg-white rounded-2xl p-7 border border-warmBorder shadow-sm hover:shadow-md hover:border-sage-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-sage-100 text-sage-800 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <i data-lucide="smile" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2.5">Ebeveyn Danışmanlığı</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Çocuğunuzun ihtiyaçlarını anlamaya çalışırken kendi duygularınız, sınırlarınız ve ebeveynlikten beklentileriniz de gündeme gelebilir. Ebeveynlikte zorlandığınız durumları, çocuğunuzla kurduğunuz ilişkiyi ve aile içindeki sorumlulukları birlikte ele alabiliriz.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-warmBorder/60 pt-4">
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>Çocukla iletişim, sınır koyma ve çatışmalar</span></li>
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>Ebeveynlikte yorgunluk, suçluluk ve yetersizlik hissi</span></li>
+                            <li class="flex items-start gap-2"><span class="text-sage-700 font-bold">•</span><span>Ebeveynler arasındaki yaklaşım farklılıkları ve sorumluluk paylaşımı</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Kart 9: Duyguları Anlamak ve İfade Etmek -->
+                    <div class="bg-white rounded-2xl p-7 border border-warmBorder shadow-sm hover:shadow-md hover:border-sage-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-wood-200 text-wood-800 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <i data-lucide="sparkles" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2.5">Duyguları Anlamak ve İfade Etmek</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Öfke, suçluluk, utanç veya kırgınlık gibi duyguları anlamakta ve dile getirmekte zorlanmak yorucu bir hâl alabilir. Yaşadığınız duygusal deneyimleri, ne hissettiğinizi ve bunları güvenle ifade etme yollarını birlikte ele alabiliriz.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-warmBorder/60 pt-4">
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Yoğun duygular yaşama veya ne hissettiğini anlamakta zorlanma</span></li>
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Duyguları içinde tutma ve ifade etmekte güçlük</span></li>
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Öfke, suçluluk, utanç ve kırgınlıkla ilgili deneyimler</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Kart 10: Keyifsizlik ve İsteksizlik -->
+                    <div class="bg-white rounded-2xl p-7 border border-warmBorder shadow-sm hover:shadow-md hover:border-sage-300 transition-all group flex flex-col justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-wood-200 text-wood-800 flex items-center justify-center mb-5 group-hover:scale-105 transition-transform">
+                                <i data-lucide="sun-dim" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-stone-900 mb-2.5">Keyifsizlik ve İsteksizlik</h3>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-4">
+                                Günlük hayatın ağır geldiği, eskiden keyif veren şeylere karşı ilginin azaldığı dönemler olabilir. Yaşadığınız isteksizliği, geri çekilme ihtiyacını ve günlük akışta sizi zorlayan duygusal durgunluğu birlikte anlamaya çalışabiliriz.
+                            </p>
+                        </div>
+                        <ul class="text-xs text-stone-500 space-y-2 border-t border-warmBorder/60 pt-4">
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Eskiden ilgi duyulan şeylere karşı isteksizlik</span></li>
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Günlük işleri sürdürmekte zorlanma ve geri çekilme</span></li>
+                            <li class="flex items-start gap-2"><span class="text-wood-700 font-bold">•</span><span>Keyifsizlik, umutsuzluk ve duygusal durgunluk</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- Alt Çağrı Notu -->
+                <div class="mt-14 text-center max-w-xl mx-auto space-y-3.5">
+                    <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+                        Yaşadığınız deneyim yukarıdaki başlıklardan hiçbirine tam uymuyor gibi görünse bile görüşebiliriz.
+                    </p>
+                    <div>
+                        <button onclick="openBookingModal()" class="inline-flex items-center gap-2 text-sage-800 font-semibold hover:text-sage-950 underline underline-offset-4 text-sm sm:text-base transition-colors group">
+                            <span>Konuyu birlikte değerlendirmek için randevu alın</span>
+                            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 5. GÖRÜŞME SÜRECİ: ADIM ADIM REHBER           -->
+        <!-- ============================================== -->
+        <section id="surec" class="py-20 md:py-28">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="max-w-2xl mx-auto text-center mb-16 space-y-3">
+                    <span class="text-xs uppercase tracking-widest text-wood-600 font-bold">Nasıl İlerliyoruz?</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-sage-950 font-bold">
+                        Görüşme Süreci Nasıl Başlar ve Sürer?
+                    </h2>
+                    <p class="text-stone-600 text-sm sm:text-base">
+                        Daha önce danışmanlık deneyiminiz yoksa bile süreç tamamen sizin ritminize göre şekillenen, şeffaf ve anlaşılır bir yapıya sahiptir.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+                    
+                    <!-- Adım 1 -->
+                    <div class="bg-warmCard rounded-2xl p-6 border border-warmBorder relative flex flex-col justify-between">
+                        <div>
+                            <span class="w-10 h-10 rounded-full bg-sage-800 text-white font-serif text-lg font-bold flex items-center justify-center mb-4">
+                                1
+                            </span>
+                            <h3 class="font-serif text-lg font-bold text-stone-900 mb-2">İlk İletişim & Randevu</h3>
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                Web sitesindeki randevu formu veya e-posta üzerinden yüz yüze ya da çevrim içi görüşme için ilk temas kurulur; karşılıklı uygun bir gün ve saat belirlenir.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-warmBorder/60 text-xs text-wood-700 font-medium">
+                            Ön bilgilendirme ve randevu planlaması
+                        </div>
+                    </div>
+
+                    <!-- Adım 2 -->
+                    <div class="bg-warmCard rounded-2xl p-6 border border-warmBorder relative flex flex-col justify-between">
+                        <div>
+                            <span class="w-10 h-10 rounded-full bg-sage-800 text-white font-serif text-lg font-bold flex items-center justify-center mb-4">
+                                2
+                            </span>
+                            <h3 class="font-serif text-lg font-bold text-stone-900 mb-2">İlk Görüşme (Değerlendirme)</h3>
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                45-50 dakikalık bu ilk oturumda sizi danışmanlığa getiren konular, güncel yaşam koşullarınız ve ihtiyaçlarınız dinlenir; sürecin nasıl ilerleyeceğine dair genel bir çerçeve oluşturulur.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-warmBorder/60 text-xs text-wood-700 font-medium">
+                            Mevcut durumun ve ihtiyaçların anlaşılması
+                        </div>
+                    </div>
+
+                    <!-- Adım 3 -->
+                    <div class="bg-warmCard rounded-2xl p-6 border border-warmBorder relative flex flex-col justify-between">
+                        <div>
+                            <span class="w-10 h-10 rounded-full bg-sage-800 text-white font-serif text-lg font-bold flex items-center justify-center mb-4">
+                                3
+                            </span>
+                            <h3 class="font-serif text-lg font-bold text-stone-900 mb-2">Çalışma Çerçevesi & Gizlilik</h3>
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                Görüşmelerin sıklığı, seans sınırları ve mesleki gizlilik ilkeleri karşılıklı olarak netleştirilir. Paylaşılan tüm konular güvenli ve etik bir zeminde korunur.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-warmBorder/60 text-xs text-wood-700 font-medium">
+                            Şeffaf ve güvenli mesleki zemin
+                        </div>
+                    </div>
+
+                    <!-- Adım 4 -->
+                    <div class="bg-warmCard rounded-2xl p-6 border border-warmBorder relative flex flex-col justify-between">
+                        <div>
+                            <span class="w-10 h-10 rounded-full bg-sage-800 text-white font-serif text-lg font-bold flex items-center justify-center mb-4">
+                                4
+                            </span>
+                            <h3 class="font-serif text-lg font-bold text-stone-900 mb-2">Sürecin İlerlemesi & Değerlendirme</h3>
+                            <p class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+                                Belirlenen periyotta (genellikle haftada bir) görüşmeler sürdürülür. Sürecin nasıl gittiği, ele alınan konular ve ihtiyaçların ne yönde evrildiği belirli aralıklarla birlikte gözden geçirilir.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-3 border-t border-warmBorder/60 text-xs text-wood-700 font-medium">
+                            Düzenli takip ve ortak gözden geçirme
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 6. YAZILAR & NOTLAR (KLİNİK İÇGÖRÜLER)          -->
+        <!-- ============================================== -->
+        <section id="yazilar" class="py-20 md:py-28 bg-warmCard/40 border-t border-warmBorder">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="mb-12">
+                    <h2 class="font-serif text-3xl sm:text-4xl text-sage-950 font-bold">
+                        Yazılar & Notlar
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="homeArticlesGrid">
+                    <!-- Makale 1 -->
+                    <article class="bg-white rounded-2xl overflow-hidden border border-warmBorder shadow-sm hover:shadow-md transition-all flex flex-col group">
+                        <div class="aspect-[16/9] overflow-hidden bg-stone-100">
+                            <img src="images/yazi_1.jpg" 
+                                 alt="Sürekli düşünmek neden bu kadar yorucu?" 
+                                 loading="lazy"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-semibold text-wood-700 uppercase tracking-wider">Düşünceler ve Kaygı</span>
+                                <h3 class="font-serif text-xl font-bold text-stone-900 mt-2 mb-3 group-hover:text-sage-800 transition-colors leading-snug">
+                                    Sürekli düşünmek neden bu kadar yorucu?
+                                </h3>
+                                <p class="text-stone-600 text-sm leading-relaxed line-clamp-3">
+                                    Bazen bir konuşma bitse de zihnimizde devam edebilir. Aynı cümleye veya ihtimale dönüp durmak, yaşadığımız şeyi anlamaya çalışmanın yorucu bir biçimi hâline gelebilir.
+                                </p>
+                            </div>
+                            <div class="pt-5 mt-4 border-t border-warmBorder/60 flex items-center justify-between">
+                                <span class="text-xs text-stone-400">3 dk okuma</span>
+                                <button onclick="openArticleModal(1)" class="text-sm font-semibold text-sage-800 hover:text-sage-950 flex items-center gap-1 group/btn">
+                                    <span>Yazıyı Oku</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Makale 2 -->
+                    <article class="bg-white rounded-2xl overflow-hidden border border-warmBorder shadow-sm hover:shadow-md transition-all flex flex-col group">
+                        <div class="aspect-[16/9] overflow-hidden bg-stone-100">
+                            <img src="images/yazi_2.jpg" 
+                                 alt="Belirsizlik neden bu kadar zor gelir?" 
+                                 loading="lazy"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-semibold text-wood-700 uppercase tracking-wider">Düşünceler ve Kaygı</span>
+                                <h3 class="font-serif text-xl font-bold text-stone-900 mt-2 mb-3 group-hover:text-sage-800 transition-colors leading-snug">
+                                    Belirsizlik neden bu kadar zor gelir?
+                                </h3>
+                                <p class="text-stone-600 text-sm leading-relaxed line-clamp-3">
+                                    Bir cevap beklemek bazen günün büyük bölümünü kaplayabilir. Henüz ne olacağını bilmediğimiz bir durum, kendi içinde farklı korkulara ve beklentilere dokunabilir.
+                                </p>
+                            </div>
+                            <div class="pt-5 mt-4 border-t border-warmBorder/60 flex items-center justify-between">
+                                <span class="text-xs text-stone-400">3 dk okuma</span>
+                                <button onclick="openArticleModal(2)" class="text-sm font-semibold text-sage-800 hover:text-sage-950 flex items-center gap-1 group/btn">
+                                    <span>Yazıyı Oku</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Makale 3 -->
+                    <article class="bg-white rounded-2xl overflow-hidden border border-warmBorder shadow-sm hover:shadow-md transition-all flex flex-col group">
+                        <div class="aspect-[16/9] overflow-hidden bg-stone-100">
+                            <img src="images/yazi_3.jpg" 
+                                 alt="Kaygı yükseldiğinde neler yaşayabiliriz?" 
+                                 loading="lazy"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-semibold text-wood-700 uppercase tracking-wider">Düşünceler ve Kaygı</span>
+                                <h3 class="font-serif text-xl font-bold text-stone-900 mt-2 mb-3 group-hover:text-sage-800 transition-colors leading-snug">
+                                    Kaygı yükseldiğinde neler yaşayabiliriz?
+                                </h3>
+                                <p class="text-stone-600 text-sm leading-relaxed line-clamp-3">
+                                    Kaygı bazen bir düşünceyle, bazen bedendeki bir gerginlikle fark edilebilir. Aynı duygu, farklı kişilerde ve farklı koşullarda değişik biçimlerde yaşanabilir.
+                                </p>
+                            </div>
+                            <div class="pt-5 mt-4 border-t border-warmBorder/60 flex items-center justify-between">
+                                <span class="text-xs text-stone-400">3 dk okuma</span>
+                                <button onclick="openArticleModal(3)" class="text-sm font-semibold text-sage-800 hover:text-sage-950 flex items-center gap-1 group/btn">
+                                    <span>Yazıyı Oku</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Makale 4 -->
+                    <article class="bg-white rounded-2xl overflow-hidden border border-warmBorder shadow-sm hover:shadow-md transition-all flex flex-col group">
+                        <div class="aspect-[16/9] overflow-hidden bg-stone-100">
+                            <img src="images/yazi_4.jpg" 
+                                 alt="Hayır demek neden zor gelir?" 
+                                 loading="lazy"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-semibold text-wood-700 uppercase tracking-wider">İhtiyaçlar ve Sınırlar</span>
+                                <h3 class="font-serif text-xl font-bold text-stone-900 mt-2 mb-3 group-hover:text-sage-800 transition-colors leading-snug">
+                                    Hayır demek neden zor gelir?
+                                </h3>
+                                <p class="text-stone-600 text-sm leading-relaxed line-clamp-3">
+                                    Bir isteği geri çevirmek bazen söyleyeceğimiz cümleden daha büyük bir anlam taşıyabilir. Kendi ihtiyacımızla ilişkimizi koruma isteğimiz arasında kalmış hissedebiliriz.
+                                </p>
+                            </div>
+                            <div class="pt-5 mt-4 border-t border-warmBorder/60 flex items-center justify-between">
+                                <span class="text-xs text-stone-400">3 dk okuma</span>
+                                <button onclick="openArticleModal(4)" class="text-sm font-semibold text-sage-800 hover:text-sage-950 flex items-center gap-1 group/btn">
+                                    <span>Yazıyı Oku</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Makale 5 -->
+                    <article class="bg-white rounded-2xl overflow-hidden border border-warmBorder shadow-sm hover:shadow-md transition-all flex flex-col group">
+                        <div class="aspect-[16/9] overflow-hidden bg-stone-100">
+                            <img src="images/yazi_5.jpg" 
+                                 alt="Kendimize neden bu kadar sert davranırız?" 
+                                 loading="lazy"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-semibold text-wood-700 uppercase tracking-wider">Kendimizle İlişki</span>
+                                <h3 class="font-serif text-xl font-bold text-stone-900 mt-2 mb-3 group-hover:text-sage-800 transition-colors leading-snug">
+                                    Kendimize neden bu kadar sert davranırız?
+                                </h3>
+                                <p class="text-stone-600 text-sm leading-relaxed line-clamp-3">
+                                    Bir hata bazen yalnızca yaptığımız işle ilgili kalmayabilir. Kendimize yönelttiğimiz cümleler, bütün kişiliğimizi değerlendirdiğimiz daha ağır bir konuşmaya dönüşebilir.
+                                </p>
+                            </div>
+                            <div class="pt-5 mt-4 border-t border-warmBorder/60 flex items-center justify-between">
+                                <span class="text-xs text-stone-400">3 dk okuma</span>
+                                <button onclick="openArticleModal(5)" class="text-sm font-semibold text-sage-800 hover:text-sage-950 flex items-center gap-1 group/btn">
+                                    <span>Yazıyı Oku</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Makale 6 -->
+                    <article class="bg-white rounded-2xl overflow-hidden border border-warmBorder shadow-sm hover:shadow-md transition-all flex flex-col group">
+                        <div class="aspect-[16/9] overflow-hidden bg-stone-100">
+                            <img src="images/yazi_6.jpg" 
+                                 alt="Yeterince iyi ne zaman yeterli olur?" 
+                                 loading="lazy"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-semibold text-wood-700 uppercase tracking-wider">Kendimizle İlişki</span>
+                                <h3 class="font-serif text-xl font-bold text-stone-900 mt-2 mb-3 group-hover:text-sage-800 transition-colors leading-snug">
+                                    Yeterince iyi ne zaman yeterli olur?
+                                </h3>
+                                <p class="text-stone-600 text-sm leading-relaxed line-clamp-3">
+                                    Bir işi bitirmiş olmakla, o işin yeterince iyi olduğuna inanmak aynı anda gerçekleşmeyebilir. Kendimizden beklediğimiz ölçüler bizi meşgul edebilir.
+                                </p>
+                            </div>
+                            <div class="pt-5 mt-4 border-t border-warmBorder/60 flex items-center justify-between">
+                                <span class="text-xs text-stone-400">3 dk okuma</span>
+                                <button onclick="openArticleModal(6)" class="text-sm font-semibold text-sage-800 hover:text-sage-950 flex items-center gap-1 group/btn">
+                                    <span>Yazıyı Oku</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Makale 7 -->
+                    <article class="bg-white rounded-2xl overflow-hidden border border-warmBorder shadow-sm hover:shadow-md transition-all flex flex-col group">
+                        <div class="aspect-[16/9] overflow-hidden bg-stone-100">
+                            <img src="images/yazi_7.jpg" 
+                                 alt="Erteledikçe büyüyen işler" 
+                                 loading="lazy"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-semibold text-wood-700 uppercase tracking-wider">Gündelik Yaşam</span>
+                                <h3 class="font-serif text-xl font-bold text-stone-900 mt-2 mb-3 group-hover:text-sage-800 transition-colors leading-snug">
+                                    Erteledikçe büyüyen işler
+                                </h3>
+                                <p class="text-stone-600 text-sm leading-relaxed line-clamp-3">
+                                    Yapılması gereken bir işi bilmek, ona başlayabilmek için her zaman yeterli gelmeyebilir. Ertelemenin görünür tarafının arkasında farklı duygular ve koşullar bulunabilir.
+                                </p>
+                            </div>
+                            <div class="pt-5 mt-4 border-t border-warmBorder/60 flex items-center justify-between">
+                                <span class="text-xs text-stone-400">3 dk okuma</span>
+                                <button onclick="openArticleModal(7)" class="text-sm font-semibold text-sage-800 hover:text-sage-950 flex items-center gap-1 group/btn">
+                                    <span>Yazıyı Oku</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Makale 8 -->
+                    <article class="bg-white rounded-2xl overflow-hidden border border-warmBorder shadow-sm hover:shadow-md transition-all flex flex-col group">
+                        <div class="aspect-[16/9] overflow-hidden bg-stone-100">
+                            <img src="images/yazi_8.jpg" 
+                                 alt="Dinlensek de geçmeyen yorgunluk" 
+                                 loading="lazy"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-semibold text-wood-700 uppercase tracking-wider">Gündelik Yaşam</span>
+                                <h3 class="font-serif text-xl font-bold text-stone-900 mt-2 mb-3 group-hover:text-sage-800 transition-colors leading-snug">
+                                    Dinlensek de geçmeyen yorgunluk
+                                </h3>
+                                <p class="text-stone-600 text-sm leading-relaxed line-clamp-3">
+                                    Yorgunluk bazen yaptığımız işlerin sayısından daha fazlasıyla ilgili olabilir. Bedenimizin durumu, taşıdığımız sorumluluklar ve dinlenmenin anlamı bu deneyime eşlik eder.
+                                </p>
+                            </div>
+                            <div class="pt-5 mt-4 border-t border-warmBorder/60 flex items-center justify-between">
+                                <span class="text-xs text-stone-400">3 dk okuma</span>
+                                <button onclick="openArticleModal(8)" class="text-sm font-semibold text-sage-800 hover:text-sage-950 flex items-center gap-1 group/btn">
+                                    <span>Yazıyı Oku</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Makale 9 -->
+                    <article class="bg-white rounded-2xl overflow-hidden border border-warmBorder shadow-sm hover:shadow-md transition-all flex flex-col group">
+                        <div class="aspect-[16/9] overflow-hidden bg-stone-100">
+                            <img src="images/yazi_9.jpg" 
+                                 alt="İlişkilerde neden aynı yerde zorlanırız?" 
+                                 loading="lazy"
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 flex-1 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-semibold text-wood-700 uppercase tracking-wider">İlişkiler</span>
+                                <h3 class="font-serif text-xl font-bold text-stone-900 mt-2 mb-3 group-hover:text-sage-800 transition-colors leading-snug">
+                                    İlişkilerde neden aynı yerde zorlanırız?
+                                </h3>
+                                <p class="text-stone-600 text-sm leading-relaxed line-clamp-3">
+                                    Bazı tartışmalar farklı konularda başlasa da tanıdık bir yere varabilir. İlişkide tekrar eden bir güçlük, ona verdiğimiz anlam üzerinden de ele alınabilir.
+                                </p>
+                            </div>
+                            <div class="pt-5 mt-4 border-t border-warmBorder/60 flex items-center justify-between">
+                                <span class="text-xs text-stone-400">3 dk okuma</span>
+                                <button onclick="openArticleModal(9)" class="text-sm font-semibold text-sage-800 hover:text-sage-950 flex items-center gap-1 group/btn">
+                                    <span>Yazıyı Oku</span>
+                                    <i data-lucide="arrow-right" class="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Tüm Yazılara Yönlendiren Şık Kart -->
+                <div class="mt-14 p-8 sm:p-10 bg-white rounded-3xl border border-warmBorder shadow-sm flex flex-col sm:flex-row items-center justify-between gap-6">
+                    <div>
+                        <span class="text-xs uppercase tracking-widest text-wood-700 font-bold">Arşiv & Okuma Parçaları</span>
+                        <h3 class="font-serif text-2xl font-bold text-sage-950 mt-1">Tüm Psikoloji Yazılarını İnceleyin</h3>
+                        <p class="text-stone-600 text-xs sm:text-sm mt-1 max-w-xl">
+                            Düşünceler, belirsizlik, sınırlar, öz-eleştiri, ilişkiler ve yas süreçlerine dair hazırladığım okuma parçalarının tamamına ulaşabilirsiniz.
+                        </p>
+                    </div>
+                    <a href="yazilar.html" class="px-8 py-3.5 bg-sage-800 hover:bg-sage-900 text-white rounded-full text-sm font-semibold transition-all inline-flex items-center gap-2.5 shrink-0 shadow-sm hover:shadow group">
+                        <span>Tüm Yazıları Gör</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 7. SIKÇA SORULAN SORULAR (AKORDİYON)           -->
+        <!-- ============================================== -->
+        <section id="sss" class="py-20 md:py-28">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center mb-14 space-y-3">
+                    <span class="text-xs uppercase tracking-widest text-wood-600 font-bold">Merak Edilenler</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl text-sage-950 font-bold">
+                        Sıkça Sorulan Sorular
+                    </h2>
+                    <p class="text-stone-600 text-sm sm:text-base">
+                        Görüşmelere başlarken zihninizde oluşabilecek bazı soru işaretlerinin yanıtları.
+                    </p>
+                </div>
+
+                <div class="space-y-4" id="faqAccordion">
+                    
+                    <!-- SSS 1 -->
+                    <div class="bg-white rounded-2xl border border-warmBorder overflow-hidden">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-stone-50/50 transition-colors" aria-expanded="false">
+                            <span class="font-serif text-lg font-bold text-stone-900">Görüşmeye başlamak için belirli bir sorun yaşamak gerekir mi?</span>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-stone-600 text-sm sm:text-base leading-relaxed border-t border-warmBorder/40 pt-4">
+                            Görüşmeye başlamak için belirli bir tanının veya yoğun bir sıkıntının bulunması gerekmez. Kendini daha iyi anlamak, ilişkilerini değerlendirmek veya hayatındaki bir değişimi konuşmak da başvuru nedeni olabilir.
+                        </div>
+                    </div>
+
+                    <!-- SSS 2 -->
+                    <div class="bg-white rounded-2xl border border-warmBorder overflow-hidden">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-stone-50/50 transition-colors" aria-expanded="false">
+                            <span class="font-serif text-lg font-bold text-stone-900">Randevu nasıl oluşturulur?</span>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-stone-600 text-sm sm:text-base leading-relaxed border-t border-warmBorder/40 pt-4">
+                            Web sitesinin iletişim bölümünde belirtilen kanallar üzerinden randevu talebi iletilebilir. Uygun gün ve saat karşılıklı olarak belirlenir.
+                        </div>
+                    </div>
+
+                    <!-- SSS 3 -->
+                    <div class="bg-white rounded-2xl border border-warmBorder overflow-hidden">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-stone-50/50 transition-colors" aria-expanded="false">
+                            <span class="font-serif text-lg font-bold text-stone-900">Görüşmeler ne kadar sürer ve ne sıklıkla yapılır?</span>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-stone-600 text-sm sm:text-base leading-relaxed border-t border-warmBorder/40 pt-4">
+                            Bireysel görüşmeler standart olarak <strong>45-50 dakika</strong> sürmektedir. Sürecin verimliliği, sürekliliği ve güvenli bağın tesis edilmesi açısından görüşmeler genellikle <strong>haftada bir</strong> aynı gün ve saatte gerçekleştirilir. İlerleyen evrelerde danışanın ihtiyacına göre bu sıklık iki haftada bire çekilebilir.
+                        </div>
+                    </div>
+
+                    <!-- SSS 4 -->
+                    <div class="bg-white rounded-2xl border border-warmBorder overflow-hidden">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-stone-50/50 transition-colors" aria-expanded="false">
+                            <span class="font-serif text-lg font-bold text-stone-900">Görüşme süreci ne kadar sürer ve ne zaman sonlanır?</span>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-stone-600 text-sm sm:text-base leading-relaxed border-t border-warmBorder/40 pt-4">
+                            Sürecin uzunluğu, danışanın ihtiyaçlarına ve ele alınan konulara göre değişebilir. Görüşmelerin ne zaman sonlandırılacağı, belirlenen amaçlar ve süreçteki ilerleme doğrultusunda danışan ve uzman tarafından birlikte değerlendirilir.
+                        </div>
+                    </div>
+
+                    <!-- SSS 5 -->
+                    <div class="bg-white rounded-2xl border border-warmBorder overflow-hidden">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-stone-50/50 transition-colors" aria-expanded="false">
+                            <span class="font-serif text-lg font-bold text-stone-900">İlk görüşmede ne anlatmalıyım? Önceden bir hazırlık yapmam gerekir mi?</span>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-stone-600 text-sm sm:text-base leading-relaxed border-t border-warmBorder/40 pt-4">
+                            Herhangi bir ön hazırlık yapmanız gerekmez. İlk oturumda aklınıza gelen herhangi bir konudan başlayabilirsiniz; nereden başlayacağınızı bilememek, heyecan duymak ya da sessiz kalmak dahi görüşmenin son derece doğal bir parçasıdır. Süreç boyunca kendinizi rahat hissedeceğiniz güvenli alanı birlikte inşa ederiz.
+                        </div>
+                    </div>
+
+                    <!-- SSS 6 -->
+                    <div class="bg-white rounded-2xl border border-warmBorder overflow-hidden">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-stone-50/50 transition-colors" aria-expanded="false">
+                            <span class="font-serif text-lg font-bold text-stone-900">Ebeveyn danışmanlığı nasıl yürütülür?</span>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-stone-600 text-sm sm:text-base leading-relaxed border-t border-warmBorder/40 pt-4">
+                            Görüşmelerde ebeveynlerin çocuklarıyla kurdukları ilişki, iletişim, sınırlar ve zorlandıkları durumlar ele alınır. Ebeveynlerin kendi duygularına, ihtiyaçlarına ve aile içindeki sorumluluklarına da yer verilir.
+                        </div>
+                    </div>
+
+                    <!-- SSS 7 -->
+                    <div class="bg-white rounded-2xl border border-warmBorder overflow-hidden">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-stone-50/50 transition-colors" aria-expanded="false">
+                            <span class="font-serif text-lg font-bold text-stone-900">Çevrim içi görüşmeler yüz yüze görüşmeler kadar etkili midir?</span>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-stone-600 text-sm sm:text-base leading-relaxed border-t border-warmBorder/40 pt-4">
+                            Güncel araştırmalar, sessiz ve mahremiyetin sağlandığı uygun koşullarda yürütülen çevrim içi (online) danışmanlık çalışmalarının, yüz yüze görüşmelerle eşdeğer bir derinlik ve klinik etki sağladığını göstermektedir. Şehir dışında, yurt dışında yaşayan veya ofise ulaşmakta güçlük çeken danışanlar için konforlu ve güvenilir bir alternatiftir.
+                        </div>
+                    </div>
+
+                    <!-- SSS 8 -->
+                    <div class="bg-white rounded-2xl border border-warmBorder overflow-hidden">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-stone-50/50 transition-colors" aria-expanded="false">
+                            <span class="font-serif text-lg font-bold text-stone-900">Klinik psikolog ile psikiyatrist arasındaki fark nedir? İlaç yazıyor musunuz?</span>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-stone-600 text-sm sm:text-base leading-relaxed border-t border-warmBorder/40 pt-4">
+                            Klinik psikologlar, klinik psikoloji alanında lisansüstü eğitim almış uzmanlardır; psikolojik değerlendirme ve görüşmeler yürütürler. Psikiyatristler ise ruh sağlığı ve hastalıkları alanında uzmanlaşmış hekimlerdir ve gerektiğinde ilaç tedavisi düzenlerler. Klinik psikologlar ilaç yazmaz; ihtiyaç duyulduğunda psikiyatri uzmanına yönlendirme yapılır.
+                        </div>
+                    </div>
+
+                    <!-- SSS 9 -->
+                    <div class="bg-white rounded-2xl border border-warmBorder overflow-hidden">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-stone-50/50 transition-colors" aria-expanded="false">
+                            <span class="font-serif text-lg font-bold text-stone-900">Görüşmelerdeki gizlilik ve etik ilkeler nasıl işler?</span>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-stone-600 text-sm sm:text-base leading-relaxed border-t border-warmBorder/40 pt-4">
+                            Görüşmelerin en temel esası gizliliktir. Mesleki etik ve gizlilik ilkeleri uyarınca oturumlarda paylaşılan tüm bilgiler koruma altındadır; danışanın açık onayı olmaksızın aile bireyleri, eş veya kurumlar dahil hiçbir üçüncü kişiyle paylaşılmaz. (Yasal zorunluluk gerektiren, danışanın kendisine veya bir başkasına hayati zarar riski taşıdığı istisnai durumlar haricindedir).
+                        </div>
+                    </div>
+
+                    <!-- SSS 10 -->
+                    <div class="bg-white rounded-2xl border border-warmBorder overflow-hidden">
+                        <button class="faq-btn w-full p-6 text-left flex items-center justify-between gap-4 hover:bg-stone-50/50 transition-colors" aria-expanded="false">
+                            <span class="font-serif text-lg font-bold text-stone-900">Randevu iptali veya tarih değişikliği nasıl yapılır?</span>
+                            <i data-lucide="chevron-down" class="faq-icon w-5 h-5 text-stone-400 shrink-0 transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-content hidden px-6 pb-6 text-stone-600 text-sm sm:text-base leading-relaxed border-t border-warmBorder/40 pt-4">
+                            Görüşme saati danışana özel olarak ayrıldığından, iptal veya tarih değişikliği taleplerinin en az 24 saat öncesinden, belirlenen iletişim kanalları üzerinden uzmana bildirilmesi gerekir.
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ============================================== -->
+        <!-- 8. İLETİŞİM & RANDEVU TALEP ET FORM BÖLÜMÜ    -->
+        <!-- ============================================== -->
+        <section id="iletisim" class="py-20 md:py-28 bg-sage-950 text-stone-200 relative overflow-hidden">
+            
+            <!-- Dekoratif ışık & orman yeşili tonları -->
+            <div class="absolute top-0 right-0 -mr-40 -mt-40 w-[500px] h-[500px] rounded-full bg-sage-800/40 blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 -ml-40 -mb-40 w-[500px] h-[500px] rounded-full bg-wood-900/30 blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    
+                    <!-- Sol Sütun: Klinik & İletişim Bilgileri (5 Sütun) -->
+                    <div class="lg:col-span-5 space-y-8">
+                        <div>
+                            <span class="text-xs uppercase tracking-widest text-sage-300 font-bold">İletişim & Konum</span>
+                            <h2 class="font-serif text-3xl sm:text-4xl text-white font-bold mt-2">
+                                Kendiniz İçin Bir Adım Atın.
+                            </h2>
+                            <p class="text-stone-300 text-sm sm:text-base mt-3 leading-relaxed">
+                                Ofiste yüz yüze veya dilediğiniz yerden online görüşme için formu doldurarak ilk adımı atabilirsiniz. Size en kısa sürede dönüş sağlanacaktır.
+                            </p>
+                        </div>
+
+                        <!-- İletişim Detayları -->
+                        <div class="space-y-5 text-sm">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-sage-900 border border-sage-800 flex items-center justify-center text-sage-300 shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Ofis Adresi</h4>
+                                    <p class="text-stone-300 mt-0.5 font-medium">Mustafa Kemal Mahallesi, Çankaya, Ankara</p>
+                                    <span class="text-xs text-sage-400">(Yüz yüze görüşmeler randevu teyidi ile gerçekleştirilir)</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-sage-900 border border-sage-800 flex items-center justify-center text-sage-300 shrink-0">
+                                    <i data-lucide="mail" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">E-Posta</h4>
+                                    <a href="mailto:rifatcan@gmail.com" class="text-stone-300 hover:text-white transition-colors block font-medium">rifatcan@gmail.com</a>
+                                    <span class="text-xs text-stone-500">Tüm randevu talepleri ve sorularınız e-posta ile yanıtlanır</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-xl bg-sage-900 border border-sage-800 flex items-center justify-center text-sage-300 shrink-0">
+                                    <i data-lucide="clock" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white">Çalışma Saatleri</h4>
+                                    <p class="text-stone-400 mt-0.5">Pazartesi – Cumartesi: 10:00 – 20:00</p>
+                                    <span class="text-xs text-stone-500">Pazar: Kapalı</span>
+                                </div>
+                            </div>
+
+                            <!-- Etik ve Güvenlik Rozeti -->
+                            <div class="p-4 rounded-2xl bg-sage-900/60 border border-sage-800/80 text-xs text-stone-300 space-y-2 mt-4">
+                                <div class="flex items-center gap-2 text-sage-300 font-semibold">
+                                    <i data-lucide="shield-check" class="w-4 h-4 text-sage-400"></i>
+                                    <span>Mesleki Etik & Gizlilik Güvencesi</span>
+                                </div>
+                                <p class="text-stone-400 leading-relaxed text-[11px]">
+                                    Görüşmelerde paylaşılan tüm bilgiler mesleki etik standartlar ve yasal gizlilik çerçevesinde titizlikle korunur.
+                                </p>
+                                <button type="button" onclick="openEthicsModal()" class="text-sage-300 hover:text-white underline text-xs font-medium flex items-center gap-1">
+                                    <span>Mesleki Etik İlkeleri İncele</span>
+                                    <i data-lucide="arrow-right" class="w-3 h-3"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Doğrudan E-Posta Butonu -->
+                        <div class="pt-2">
+                            <a href="mailto:rifatcan@gmail.com" 
+                               class="inline-flex items-center gap-3 px-6 py-3.5 bg-sage-800 hover:bg-sage-700 text-white rounded-full text-sm font-medium transition-all shadow-md">
+                                <i data-lucide="mail" class="w-4 h-4 text-sage-300"></i>
+                                <span>Doğrudan E-Posta Gönder</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Sağ Sütun: İnteraktif Randevu Talep Formu (7 Sütun) -->
+                    <div class="lg:col-span-7">
+                        <div class="bg-stone-900/90 backdrop-blur-md rounded-3xl p-7 sm:p-10 border border-sage-800/80 shadow-2xl">
+                            
+                            <h3 class="font-serif text-2xl font-bold text-white mb-2">Randevu Talep Formu</h3>
+                            <p class="text-xs sm:text-sm text-stone-400 mb-6">
+                                Formu ilettiğinizde talebiniz doğrudan bana ulaşır; belirttiğiniz e-posta adresi üzerinden en kısa sürede randevu detayları için sizinle iletişime geçilir.
+                            </p>
+
+                            <form id="appointmentForm" class="space-y-4" onsubmit="handleAppointmentSubmit(event)">
+                                
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="fullName" class="block text-xs font-medium text-stone-300 mb-1.5">Adınız Soyadınız *</label>
+                                        <input type="text" id="fullName" name="ad_soyad" required placeholder="Adınız Soyadınız" 
+                                               class="w-full px-4 py-3 bg-stone-800/90 border border-stone-700 rounded-xl text-stone-100 placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent transition-all">
+                                    </div>
+                                    <div>
+                                        <label for="emailAddress" class="block text-xs font-medium text-stone-300 mb-1.5">E-Posta Adresiniz *</label>
+                                        <input type="email" id="emailAddress" name="email" required placeholder="ornek@email.com" 
+                                               class="w-full px-4 py-3 bg-stone-800/90 border border-stone-700 rounded-xl text-stone-100 placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent transition-all">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="phoneNumber" class="block text-xs font-medium text-stone-300 mb-1.5">Telefon Numaranız (Opsiyonel)</label>
+                                        <input type="tel" id="phoneNumber" name="telefon" placeholder="İletişim için (Opsiyonel)" 
+                                               class="w-full px-4 py-3 bg-stone-800/90 border border-stone-700 rounded-xl text-stone-100 placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent transition-all">
+                                    </div>
+                                    <div>
+                                        <label for="sessionType" class="block text-xs font-medium text-stone-300 mb-1.5">Görüşme Tercihi *</label>
+                                        <select id="sessionType" name="gorusme_turu" required class="w-full px-4 py-3 bg-stone-800/90 border border-stone-700 rounded-xl text-stone-100 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent transition-all">
+                                            <option value="Yüz Yüze (Mustafa Kemal Mah. Çankaya)">Yüz Yüze (Mustafa Kemal Mah. Çankaya)</option>
+                                            <option value="Çevrim İçi (Online)">Çevrim İçi (Online)</option>
+                                            <option value="Fark etmez / Birlikte Karar Verelim">Fark etmez / Birlikte Karar Verelim</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="preferredTime" class="block text-xs font-medium text-stone-300 mb-1.5">Tercih Ettiğiniz Zaman Dilimi</label>
+                                        <select id="preferredTime" name="uygun_zaman" class="w-full px-4 py-3 bg-stone-800/90 border border-stone-700 rounded-xl text-stone-100 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent transition-all">
+                                            <option value="Hafta İçi Gündüz (10:00 - 16:00)">Hafta İçi Gündüz (10:00 - 16:00)</option>
+                                            <option value="Hafta İçi Akşam (17:00 - 20:00)">Hafta İçi Akşam (17:00 - 20:00)</option>
+                                            <option value="Cumartesi Günü">Cumartesi Günü</option>
+                                            <option value="Esnek / En Erken Uygun Zaman">Esnek / En Erken Uygun Zaman</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="previousTherapy" class="block text-xs font-medium text-stone-300 mb-1.5">Daha Önce Danışmanlık Deneyiminiz Var mı?</label>
+                                        <select id="previousTherapy" name="onceki_deneyim" class="w-full px-4 py-3 bg-stone-800/90 border border-stone-700 rounded-xl text-stone-100 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent transition-all">
+                                            <option value="Hayır, ilk defa katılacağım">Hayır, ilk defa katılacağım</option>
+                                            <option value="Evet, daha önce katıldım">Evet, daha önce katıldım</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="messageNote" class="block text-xs font-medium text-stone-300 mb-1.5">Kısaca Başvuru Nedeni veya Notunuz (Opsiyonel)</label>
+                                    <textarea id="messageNote" name="mesaj" rows="3" placeholder="Görüşmeye gelme nedeniniz veya belirtmek istediğiniz bir konu varsa yazabilirsiniz..." 
+                                              class="w-full px-4 py-3 bg-stone-800/90 border border-stone-700 rounded-xl text-stone-100 placeholder-stone-500 text-sm focus:outline-none focus:ring-2 focus:ring-sage-500 focus:border-transparent transition-all"></textarea>
+                                </div>
+
+                                <!-- Güvenlik Kontrolü / Bot Engelleme -->
+                                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                                <div class="p-3.5 bg-stone-800/80 rounded-xl border border-stone-700/80 flex items-center justify-between">
+                                    <label class="flex items-center gap-2.5 cursor-pointer select-none">
+                                        <input type="checkbox" id="humanCheck" required class="w-4 h-4 rounded border-stone-600 bg-stone-900 text-sage-600 focus:ring-sage-500 cursor-pointer">
+                                        <span class="text-xs sm:text-sm text-stone-200 font-medium">Ben robot değilim</span>
+                                    </label>
+                                    <div class="flex items-center gap-1.5 text-xs text-stone-400">
+                                        <i data-lucide="shield-check" class="w-4 h-4 text-sage-400"></i>
+                                        <span>Güvenli İletişim</span>
+                                    </div>
+                                </div>
+
+                                <!-- KVKK Onay Kutusu -->
+                                <div class="flex items-start gap-2.5 pt-1 text-left">
+                                    <input type="checkbox" id="kvkkConsent" required class="mt-1 rounded bg-stone-800 border-stone-700 text-sage-600 focus:ring-sage-500 cursor-pointer">
+                                    <label for="kvkkConsent" class="text-xs text-stone-300 cursor-pointer leading-relaxed">
+                                        <button type="button" onclick="openKvkkModal()" class="text-sage-400 underline hover:text-sage-300">KVKK Aydınlatma Metni</button>'ni okudum, iletişim verilerimin randevu planlama amacıyla işlenmesini onaylıyorum. *
+                                    </label>
+                                </div>
+
+                                <div class="pt-2">
+                                    <button type="submit" id="submitAppointmentBtn" class="w-full py-4 bg-sage-700 hover:bg-sage-600 text-white rounded-xl font-medium shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2">
+                                        <i data-lucide="send" class="w-4 h-4"></i>
+                                        <span>Randevu Talebini Gönder</span>
+                                    </button>
+                                </div>
+
+                                <p class="text-[11px] text-stone-400 text-center pt-2">
+                                    <i data-lucide="shield-check" class="w-3.5 h-3.5 inline mr-1 text-sage-400"></i>
+                                    Tüm bilgileriniz mesleki etik ve gizlilik ilkeleri uyarınca gizli tutulur ve üçüncü taraflarla paylaşılmaz.
+                                </p>
+
+                            </form>
+
+                            <!-- Başarı Mesajı (Form gönderildiğinde görünür) -->
+                            <div id="formSuccessMessage" class="hidden text-center py-10 space-y-4">
+                                <div class="w-16 h-16 rounded-full bg-sage-800 text-sage-300 mx-auto flex items-center justify-center">
+                                    <i data-lucide="check-circle" class="w-8 h-8"></i>
+                                </div>
+                                <h4 class="font-serif text-2xl font-bold text-white">Talebiniz Başarıyla İletildi</h4>
+                                <p class="text-stone-300 text-sm max-w-sm mx-auto leading-relaxed">
+                                    Randevu talebiniz tarafıma ulaştı. Belirttiğiniz e-posta adresi üzerinden en kısa sürede sizinle iletişime geçilecektir.
+                                </p>
+                                <button onclick="resetAppointmentForm()" class="px-6 py-2.5 bg-stone-800 hover:bg-stone-700 text-xs text-stone-200 rounded-full transition-colors">
+                                    Yeni Talep Oluştur
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================== -->
+    <!-- FOOTER                                         -->
+    <!-- ============================================== -->
+    <footer class="bg-stone-950 text-stone-400 text-xs py-12 border-t border-stone-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                <div>
+                    <p class="font-serif text-xl font-bold text-stone-100">Rıfat Can Telci</p>
+                    <p class="text-wood-400 text-xs">Klinik Psikolog • Yetişkin Bireysel Danışmanlık</p>
+                    <p class="text-stone-500 text-xs mt-1">E-Posta: <a href="mailto:rifatcan@gmail.com" class="text-stone-300 hover:underline">rifatcan@gmail.com</a></p>
+                </div>
+                
+                <div class="flex flex-wrap gap-4 sm:gap-6 text-stone-400 text-xs">
+                    <a href="#anasayfa" class="hover:text-stone-200 transition-colors">Ana Sayfa</a>
+                    <a href="#hakkimda" class="hover:text-stone-200 transition-colors">Hakkımda</a>
+                    <a href="#calisma-alanlari" class="hover:text-stone-200 transition-colors">Çalışma Alanları</a>
+                    <a href="#surec" class="hover:text-stone-200 transition-colors">Görüşme Süreci</a>
+                    <a href="#yazilar" class="hover:text-stone-200 transition-colors">Yazılar</a>
+                    <a href="#sss" class="hover:text-stone-200 transition-colors">S.S.S.</a>
+                    <a href="#iletisim" class="hover:text-stone-200 transition-colors">İletişim</a>
+                    <button onclick="openEthicsModal()" class="hover:text-stone-200 transition-colors underline underline-offset-2">Mesleki Etik İlkeler</button>
+                    <button onclick="openKvkkModal()" class="hover:text-stone-200 transition-colors underline underline-offset-2">KVKK Aydınlatma Metni</button>
+                    <button onclick="openCookieModal()" class="hover:text-stone-200 transition-colors underline underline-offset-2">Çerez Politikası</button>
+                </div>
+            </div>
+
+            <!-- Önemli Psikolojik Acil Durum Uyarısı -->
+            <div class="p-4 rounded-xl bg-stone-900/80 border border-stone-800 text-stone-400 leading-relaxed text-[11px]">
+                <strong class="text-stone-300">Önemli Hatırlatma:</strong> Bu internet sitesi ve iletişim formları acil kriz ve psikiyatrik acil durumlar için uygun değildir. Kendinize veya bir başkasına zarar verme riski, akut intihar düşüncesi veya kriz durumlarında lütfen vakit kaybetmeden en yakın hastane acil servisine başvurunuz ya da <strong>112 Acil Çağrı Merkezi</strong> / <strong>182 MHRS</strong> hatlarını arayınız.
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 text-stone-500 pt-4 border-t border-stone-900">
+                <p>© 2026 Uzm. Klinik Psikolog Rıfat Can Telci. Tüm hakları saklıdır.</p>
+                <p>Mustafa Kemal Mahallesi, Çankaya, Ankara & Çevrim İçi Danışmanlık</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ============================================== -->
+    <!-- MODAL: HIZLI RANDEVU AL MODALI                 -->
+    <!-- ============================================== -->
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-warmCanvas w-full max-w-lg rounded-3xl p-6 sm:p-8 shadow-2xl border border-warmBorder max-h-[90vh] overflow-y-auto relative animate-fadeIn">
+            
+            <button onclick="closeBookingModal()" class="absolute top-5 right-5 p-2 rounded-full hover:bg-stone-200 text-stone-600 transition-colors" aria-label="Kapat">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="mb-5">
+                <span class="text-xs uppercase tracking-widest text-wood-700 font-bold">İlk Adım</span>
+                <h3 class="font-serif text-2xl font-bold text-sage-950 mt-1">Görüşme Randevusu Alın</h3>
+                <p class="text-stone-600 text-xs sm:text-sm mt-1">Bilgilerinizi ilettiğinizde, uygun gün ve saat seçenekleriyle belirttiğiniz e-posta üzerinden sizinle iletişime geçilir.</p>
+            </div>
+
+            <form id="modalBookingForm" onsubmit="handleModalBookingSubmit(event)" class="space-y-3.5">
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">Adınız Soyadınız *</label>
+                    <input type="text" id="modalFullName" required placeholder="Adınız Soyadınız" class="w-full px-4 py-2.5 bg-white border border-stone-300 rounded-xl text-stone-800 text-sm focus:ring-2 focus:ring-sage-600 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">E-Posta Adresiniz *</label>
+                    <input type="email" id="modalEmail" required placeholder="ornek@email.com" class="w-full px-4 py-2.5 bg-white border border-stone-300 rounded-xl text-stone-800 text-sm focus:ring-2 focus:ring-sage-600 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">Telefon Numaranız (Opsiyonel)</label>
+                    <input type="tel" id="modalPhone" placeholder="İletişim için (Opsiyonel)" class="w-full px-4 py-2.5 bg-white border border-stone-300 rounded-xl text-stone-800 text-sm focus:ring-2 focus:ring-sage-600 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">Görüşme Şekli</label>
+                    <select id="modalSessionType" class="w-full px-4 py-2.5 bg-white border border-stone-300 rounded-xl text-stone-800 text-sm focus:ring-2 focus:ring-sage-600 focus:outline-none">
+                        <option value="Yüz Yüze (Mustafa Kemal Mah. Çankaya)">Yüz Yüze (Mustafa Kemal Mah. Çankaya)</option>
+                        <option value="Çevrim İçi (Online)">Çevrim İçi (Online)</option>
+                        <option value="Fark etmez / Birlikte Karar Verelim">Fark etmez / Birlikte Karar Verelim</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-stone-700 mb-1">Kısa Not / Belirtmek İstedikleriniz (Opsiyonel)</label>
+                    <textarea id="modalNote" rows="2" placeholder="Görüşmeye gelme nedeniniz veya uygun olduğunuz saatler..." class="w-full px-4 py-2 bg-white border border-stone-300 rounded-xl text-stone-800 text-sm focus:ring-2 focus:ring-sage-600 focus:outline-none"></textarea>
+                </div>
+
+                <!-- Güvenlik Kontrolü / Bot Engelleme -->
+                <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+                <div class="p-3 bg-stone-50 rounded-xl border border-stone-200 flex items-center justify-between">
+                    <label class="flex items-center gap-2.5 cursor-pointer select-none">
+                        <input type="checkbox" id="modalHumanCheck" required class="w-4 h-4 rounded border-stone-300 text-sage-600 focus:ring-sage-500 cursor-pointer">
+                        <span class="text-xs text-stone-700 font-medium">Ben robot değilim</span>
+                    </label>
+                    <div class="flex items-center gap-1 text-xs text-stone-500">
+                        <i data-lucide="shield-check" class="w-3.5 h-3.5 text-sage-700"></i>
+                        <span>Doğrulandı</span>
+                    </div>
+                </div>
+
+                <!-- KVKK Onayı -->
+                <div class="flex items-start gap-2 pt-1">
+                    <input type="checkbox" id="modalKvkkConsent" required class="mt-0.5 rounded border-stone-300 text-sage-600 focus:ring-sage-500 cursor-pointer">
+                    <label for="modalKvkkConsent" class="text-xs text-stone-600 cursor-pointer">
+                        <button type="button" onclick="openKvkkModal()" class="text-sage-800 underline font-medium">KVKK Aydınlatma Metni</button>'ni okudum, iletişim verilerimin randevu planlama amacıyla işlenmesini onaylıyorum. *
+                    </label>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" id="modalSubmitBtn" class="w-full py-3 bg-sage-800 hover:bg-sage-900 text-white rounded-xl font-medium text-sm transition-colors flex items-center justify-center gap-2">
+                        <i data-lucide="check" class="w-4 h-4"></i>
+                        <span>Randevu Talebini İlet</span>
+                    </button>
+                </div>
+            </form>
+
+            <div id="modalSuccess" class="hidden text-center py-6 space-y-3">
+                <div class="w-12 h-12 bg-sage-100 text-sage-800 rounded-full mx-auto flex items-center justify-center">
+                    <i data-lucide="check" class="w-6 h-6"></i>
+                </div>
+                <h4 class="font-serif text-xl font-bold text-stone-900">Talebiniz Başarıyla Alındı</h4>
+                <p class="text-xs text-stone-600">Randevu talebiniz başarıyla iletildi. Belirttiğiniz e-posta adresi üzerinden en kısa sürede sizinle iletişime geçilecektir.</p>
+                <button onclick="closeBookingModal()" class="px-5 py-2 bg-sage-800 text-white text-xs rounded-full">Tamam</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- MODAL: YAZI OKUMA MODALI                       -->
+    <!-- ============================================== -->
+    <div id="articleModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-2xl rounded-3xl p-6 sm:p-10 shadow-2xl border border-warmBorder max-h-[90vh] overflow-y-auto relative animate-fadeIn">
+            <button onclick="closeArticleModal()" class="absolute top-5 right-5 p-2 rounded-full hover:bg-stone-100 text-stone-500 transition-colors" aria-label="Kapat">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div id="articleModalContent">
+                <!-- JavaScript içeriği buraya yükleyecek -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- MODAL: MESLEKİ ETİK VE GİZLİLİK İLKELERİ       -->
+    <!-- ============================================== -->
+    <div id="ethicsModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-3xl rounded-3xl p-6 sm:p-10 shadow-2xl border border-warmBorder max-h-[90vh] overflow-y-auto relative animate-fadeIn">
+            <button onclick="closeEthicsModal()" class="absolute top-5 right-5 p-2 rounded-full hover:bg-stone-100 text-stone-500 transition-colors" aria-label="Kapat">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            
+            <div class="mb-6 border-b border-warmBorder pb-4">
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sage-100 text-sage-800 text-xs font-semibold mb-2">
+                    <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                    Mesleki Standartlar
+                </div>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-sage-950">
+                    Mesleki Etik ve Gizlilik İlkeleri
+                </h3>
+                <p class="text-stone-600 text-xs sm:text-sm mt-1">
+                    Görüşmelerimizde evrensel klinik standartlar, danışan hakları ve mesleki gizlilik ilkeleri titizlikle gözetilir.
+                </p>
+            </div>
+
+            <div class="prose prose-stone max-w-none text-stone-700 space-y-6 text-sm leading-relaxed">
+                
+                <div class="p-4 rounded-2xl bg-warmCanvas border border-warmBorder">
+                    <h4 class="font-serif text-base font-bold text-sage-950 mb-1 flex items-center gap-2">
+                        <span>1. Yetkinlik ve Yeterlilik İlkesi</span>
+                    </h4>
+                    <p class="text-xs sm:text-sm text-stone-600">
+                        Psikolog, yalnızca eğitimini aldığı, süpervizyonla desteklediği ve bilimsel olarak yetkin olduğu alanlarda danışmanlık hizmeti sunar. Uzmanlık alanı dışındaki durumlarda danışanın en yüksek yararı gözetilerek yönlendirme yapılır.
+                    </p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-warmCanvas border border-warmBorder">
+                    <h4 class="font-serif text-base font-bold text-sage-950 mb-1 flex items-center gap-2">
+                        <span>2. Yararlı Olmak ve Zarar Vermemek İlkesi</span>
+                    </h4>
+                    <p class="text-xs sm:text-sm text-stone-600">
+                        Psikolojik danışmanlığın öncelikli hedefi danışanın iyilik halini desteklemektir. Danışanın duygusal, psikolojik veya kişisel sınırları korunur; danışana zarar verebilecek her türlü çıkar ilişkisi veya suiistimal kesin bir dille reddedilir.
+                    </p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-warmCanvas border border-warmBorder">
+                    <h4 class="font-serif text-base font-bold text-sage-950 mb-1 flex items-center gap-2">
+                        <span>3. Gizlilik ve Mahremiyetin Korunması (Sır Saklama)</span>
+                    </h4>
+                    <p class="text-xs sm:text-sm text-stone-600">
+                        Görüşmelerde paylaşılan tüm bilgiler, notlar ve danışanın kimliği mutlak gizlilik altındadır. Danışanın açık yazılı izni olmaksızın hiçbir bilgi aile üyeleri, eş veya resmi/özel kurumlarla paylaşılamaz. İstisna yalnızca hayati tehlike (kendine veya başkasına yönelik hayati zarar riski) ve yasal zorunluluk halleridir.
+                    </p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-warmCanvas border border-warmBorder">
+                    <h4 class="font-serif text-base font-bold text-sage-950 mb-1 flex items-center gap-2">
+                        <span>4. Dürüstlük, Şeffaflık ve Profesyonel Sınırlar</span>
+                    </h4>
+                    <p class="text-xs sm:text-sm text-stone-600">
+                        Psikolog mesleki kimliğiyle danışan arasındaki profesyonel ilişkiyi titizlikle korur. Seans süreleri, çalışma koşulları ve yöntemler konusunda baştan açık ve net bilgilendirme yapılır; gerçek dışı beklentiler veya vaatler oluşturulmaz.
+                    </p>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-warmCanvas border border-warmBorder">
+                    <h4 class="font-serif text-base font-bold text-sage-950 mb-1 flex items-center gap-2">
+                        <span>5. İnsan Haklarına Saygı ve Ayrımcılık Yapmama</span>
+                    </h4>
+                    <p class="text-xs sm:text-sm text-stone-600">
+                        Her danışan, yaşı, cinsiyeti, cinsel yönelimi, etnik kökeni, inancı, sosyoekonomik düzeyi veya dünya görüşü ne olursa olsun koşulsuz kabul ve eşit saygı görür. Danışanın özerkliğine ve kendi yaşamı hakkında karar verme hakkına derin saygı duyulur.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-warmBorder flex justify-end">
+                <button onclick="closeEthicsModal()" class="px-6 py-2.5 bg-sage-800 text-white rounded-full text-xs font-medium hover:bg-sage-900 transition-colors">
+                    Kapat
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- MODAL: KVKK AYDINLATMA METNİ & GİZLİLİK        -->
+    <!-- ============================================== -->
+    <div id="kvkkModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-3xl rounded-3xl p-6 sm:p-10 shadow-2xl border border-warmBorder max-h-[90vh] overflow-y-auto relative animate-fadeIn">
+            <button onclick="closeKvkkModal()" class="absolute top-5 right-5 p-2 rounded-full hover:bg-stone-100 text-stone-500 transition-colors" aria-label="Kapat">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            
+            <div class="mb-6 border-b border-warmBorder pb-4">
+                <span class="text-xs uppercase tracking-widest text-wood-700 font-bold">Yasal Bilgilendirme</span>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-sage-950 mt-1">
+                    KVKK Aydınlatma Metni & Gizlilik Politikası
+                </h3>
+                <p class="text-stone-500 text-xs mt-1">6698 Sayılı Kişisel Verilerin Korunması Kanunu Kapsamında</p>
+            </div>
+
+            <div class="prose prose-stone max-w-none text-stone-700 space-y-4 text-xs sm:text-sm leading-relaxed">
+                <p>
+                    <strong>Veri Sorumlusu:</strong> Uzm. Klinik Psikolog Rıfat Can Telci (Mustafa Kemal Mahallesi, Çankaya, Ankara — <a href="mailto:rifatcan@gmail.com" class="text-sage-800 underline">rifatcan@gmail.com</a>).
+                </p>
+                
+                <h4 class="font-bold text-stone-900 text-sm mt-4">1. İşlenen Kişisel Veriler</h4>
+                <p>
+                    İnternet sitemizdeki randevu formları ve iletişim kanalları üzerinden yalnızca adınız, soyadınız, e-posta adresiniz, paylaştığınız takdirde telefon numaranız ve ilettiğiniz notlar işlenmektedir.
+                </p>
+
+                <h4 class="font-bold text-stone-900 text-sm mt-4">2. Verilerin İşlenme Amacı ve Hukuki Sebebi</h4>
+                <p>
+                    Bu kişisel veriler, yalnızca tarafınızla randevu sürecinin planlanması, bilgilendirme sağlanması ve danışmanlık hizmetlerinin etik çerçevede organize edilmesi amacıyla, açık rızanıza ve bir sözleşmenin kurulması/ifası hukuki sebebine dayalı olarak işlenir.
+                </p>
+
+                <h4 class="font-bold text-stone-900 text-sm mt-4">3. Verilerin Aktarılması</h4>
+                <p>
+                    Kişisel verileriniz hiçbir surette ticari amaçlarla kullanılmaz, üçüncü kişilere, reklam ajanslarına veya veri pazarlama şirketlerine aktarılmaz. Yalnızca yasal zorunluluk bulunan adli durumlar istisnadır.
+                </p>
+
+                <h4 class="font-bold text-stone-900 text-sm mt-4">4. Haklarınız (KVKK Madde 11)</h4>
+                <p>
+                    Kişisel verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, verilerin silinmesini veya düzeltilmesini talep etme haklarına sahipsiniz. Başvurularınızı doğrudan <a href="mailto:rifatcan@gmail.com" class="text-sage-800 underline">rifatcan@gmail.com</a> adresine iletebilirsiniz.
+                </p>
+            </div>
+
+            <div class="mt-8 pt-4 border-t border-warmBorder flex justify-end">
+                <button onclick="closeKvkkModal()" class="px-6 py-2.5 bg-sage-800 text-white rounded-full text-xs font-medium hover:bg-sage-900 transition-colors">
+                    Okudum ve Anladım
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- MODAL: ÇEREZ POLİTİKASI                        -->
+    <!-- ============================================== -->
+    <div id="cookieModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-2xl rounded-3xl p-6 sm:p-10 shadow-2xl border border-warmBorder max-h-[90vh] overflow-y-auto relative animate-fadeIn">
+            <button onclick="closeCookieModal()" class="absolute top-5 right-5 p-2 rounded-full hover:bg-stone-100 text-stone-500 transition-colors" aria-label="Kapat">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            
+            <div class="mb-5 border-b border-warmBorder pb-4">
+                <span class="text-xs uppercase tracking-widest text-wood-700 font-bold">Gizlilik & Güvenlik</span>
+                <h3 class="font-serif text-2xl font-bold text-sage-950 mt-1">Çerez (Cookie) Politikası</h3>
+            </div>
+
+            <div class="prose prose-stone max-w-none text-stone-700 space-y-3.5 text-xs sm:text-sm leading-relaxed">
+                <p>
+                    Bu web sitesinde yalnızca sitenin güvenli ve verimli şekilde çalışabilmesi, temel form fonksiyonlarının sürdürülebilmesi ve ziyaretçi deneyiminizin kolaylaştırılması amacıyla asgari düzeyde teknik ve oturum çerezleri kullanılmaktadır.
+                </p>
+                <h4 class="font-bold text-stone-900 text-sm">Kullanılan Çerez Türleri</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>Zorunlu Teknik Çerezler:</strong> Sitede gezinti yapmanızı ve form alanlarını güvenle kullanmanızı sağlar.</li>
+                    <li><strong>Tercih Çerezleri:</strong> Çerez izin tercihinizin hatırlanmasını sağlar.</li>
+                </ul>
+                <p>
+                    Sitemizde üçüncü taraf reklam veya takip çerezleri bulunmamaktadır. Dilediğiniz zaman tarayıcı ayarlarınızdan çerezleri silebilir veya engelleyebilirsiniz.
+                </p>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-warmBorder flex justify-end">
+                <button onclick="closeCookieModal()" class="px-6 py-2.5 bg-sage-800 text-white rounded-full text-xs font-medium hover:bg-sage-900 transition-colors">
+                    Kapat
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================== -->
+    <!-- ÇEREZ BİLDİRİM ÇUBUĞU (COOKIE CONSENT BANNER)  -->
+    <!-- ============================================== -->
+    <div id="cookieBanner" class="fixed bottom-4 left-4 right-4 md:left-6 md:right-auto md:max-w-md z-40 bg-stone-900/95 backdrop-blur-md text-stone-200 p-4 sm:p-5 rounded-2xl border border-stone-800 shadow-2xl flex flex-col gap-3 animate-fadeIn hidden">
+        <div class="flex items-start gap-3">
+            <div class="p-2 rounded-xl bg-sage-900 text-sage-300 shrink-0">
+                <i data-lucide="cookie" class="w-5 h-5"></i>
+            </div>
+            <div class="text-xs leading-relaxed text-stone-300">
+                <p>
+                    Sitemizde kullanıcı deneyiminizi geliştirmek ve randevu taleplerini güvenle yönetmek amacıyla temel çerezler kullanılmaktadır. 
+                    <button type="button" onclick="openCookieModal()" class="text-sage-400 underline hover:text-white">Çerez Politikamızı</button> inceleyebilirsiniz.
+                </p>
+            </div>
+        </div>
+        <div class="flex items-center justify-end gap-2 pt-1 border-t border-stone-800">
+            <button onclick="acceptCookies()" class="px-5 py-2 bg-sage-700 hover:bg-sage-600 text-white text-xs font-medium rounded-full transition-colors shadow">
+                Kabul Ediyorum
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript Dosyaları -->
+    <script src="articles-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

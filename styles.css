@@ -1,0 +1,96 @@
+/* ========================================================
+   ÖZEL STİLLER - KLİNİK PSİKOLOG RIFAT CAN TELCİ
+   Doğal Yeşiller, Sıcak Ahşap ve Dingin Beyaz Dokular
+   ======================================================== */
+
+/* Genel Yumuşak Geçişler ve Font İyileştirmeleri */
+html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: #FAF8F5;
+    color: #1E2621;
+}
+
+/* Serif Başlık Vurguları */
+h1, h2, h3, .font-serif {
+    letter-spacing: -0.015em;
+}
+
+/* Navigasyon Aktif Çizgisi */
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: #38513c;
+    transition: width 0.25s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Modal Açılış Animasyonu */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fadeIn {
+    animation: fadeInScale 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Akordiyon (SSS) Geçiş Efekti */
+.faq-content {
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* İnce ve Şık Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5F1EB;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd7ce;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a7bda9;
+}
+
+/* Form Elemanları Odaklanma (Focus) Efekti */
+input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(92, 128, 97, 0.2);
+}
+
+/* Kartlar için Yumuşak Gölgelendirme */
+.card-hover-effect {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -10px rgba(34, 52, 39, 0.08);
+}
