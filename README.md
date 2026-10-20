@@ -57,7 +57,7 @@ Ardından tarayıcınızda `http://localhost:8000` adresine gidebilirsiniz.
 
 - **Ofis Adresi:** Mustafa Kemal Mahallesi, Çankaya, Ankara
 - **İletişim Kanalı:** Web sitesindeki interaktif randevu formu ve doğrudan e-posta.
-- **E-Posta:** `rifatcan@gmail.com`
+- **E-Posta:** `info@rifatcantelci.com`
 - **Etik & Yasal Uyum:** Mesleki Etik İlkeler, 6698 sayılı KVKK Aydınlatma Metni ve Çerez Politikası entegre edilmiştir.
 - **Sosyal Medya:** Sayfalarınız hazırlandığında menüye ve alt bilgiye (footer) doğrudan bağlantı eklenecektir.
 

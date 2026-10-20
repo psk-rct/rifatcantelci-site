@@ -194,7 +194,7 @@ function closeBookingModal() {
     }
 }
 
-// Modal Randevu Formu Gönderimi (rifatcan@gmail.com adresine aktarılır)
+// Modal Randevu Formu Gönderimi (info@rifatcantelci.com adresine aktarılır)
 function handleModalBookingSubmit(event) {
     event.preventDefault();
     const form = document.getElementById('modalBookingForm');
@@ -225,8 +225,8 @@ function handleModalBookingSubmit(event) {
         if (window.lucide) window.lucide.createIcons();
     }
 
-    // FormSubmit AJAX Servisi ile rifatcan@gmail.com adresine e-posta gönderimi
-    fetch("https://formsubmit.co/ajax/rifatcan@gmail.com", {
+    // FormSubmit AJAX Servisi ile info@rifatcantelci.com adresine e-posta gönderimi
+    fetch("https://formsubmit.co/ajax/info@rifatcantelci.com", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
@@ -286,8 +286,8 @@ function handleAppointmentSubmit(event) {
         if (window.lucide) window.lucide.createIcons();
     }
 
-    // FormSubmit AJAX Servisi ile rifatcan@gmail.com adresine e-posta gönderimi
-    fetch("https://formsubmit.co/ajax/rifatcan@gmail.com", {
+    // FormSubmit AJAX Servisi ile info@rifatcantelci.com adresine e-posta gönderimi
+    fetch("https://formsubmit.co/ajax/info@rifatcantelci.com", {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
